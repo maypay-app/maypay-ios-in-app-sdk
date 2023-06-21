@@ -34,7 +34,7 @@ As specified in the [Apple Documentation](https://developer.apple.com/documentat
 
 ### SwiftUI
 
-You can display the standard Maypay button by importing the MaypaySwiftUI library and adding the MaypayButton with your requestId.
+You can display the default Maypay button by importing the MaypaySwiftUI library and adding the MaypayButton with your requestId.
 
 ```swift
 import SwiftUI
@@ -57,8 +57,14 @@ public struct MaypayButton: View {
 
 ### UIKit
 
-You can display the standard Maypay button by importing the MaypayUIKit library and adding the MaypayButton with your requestId.
-
+You can display the default Maypay button by importing the MaypayUIKit library and adding the MaypayButton with your requestId.
+To correctly import the Maypay button into your UIKit app, carry out the following steps:
+1. Verify you imported the both `Maypay` and `MaypayUIKit`.
+2. Insert a new UIButton in your storyboard.
+3. In the Attribute Inspector give the button an empty name.
+4. In the Identity Inspector assign the `MaypayButton` class from the `MaypayUIKit` module to the Button.
+5. Link the button in your ViewController and assign MaypayButton as a subView.
+ 
 ```swift
 import UIKit
 import Maypay
